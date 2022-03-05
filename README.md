@@ -30,18 +30,17 @@ Set the file path of the `KifndleSyncMetadataCache.xml` created by "Kindle for P
 
 ### WindowsOS
 
-Example.
-
-WSL
-
-- `/mnt/c/Users/{yourname}/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml`
+- When local.
+  - `/Users/{yourname}/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml`
+- When you use the WSL.
+  - `/mnt/c/Users/{yourname}/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml`
 
 ### MacOS
 
-Example.
-
-- `$HOME/Library/Application Support/Kindle/Cache/KindleSyncMetadataCache.xml`
-- `$HOME/Library/Containers/com.amazon.Kindle/Data/Library/Application Support/Kindle/Cache/KindleSyncMetadataCache.xml`
+- When you downloaded from other than the AppStore.
+  - `$HOME/Library/Containers/com.amazon.Kindle/Data/Library/Application Support/Kindle/Cache/KindleSyncMetadataCache.xml`
+- When you downloaded from the AppStore.
+  - `$HOME/Library/Application Support/Kindle/Cache/KindleSyncMetadataCache.xml`
 
 As you can see, you can check like the following the images.
 

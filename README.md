@@ -1,7 +1,8 @@
-# kindle csv
+# Kindle books csv
 
 Output a CSV file for your purchased Kindle books list.
-In this project, you must use Kindle for PC.
+
+In this project, you must use "Kindle for PC" or "Kindle for Mac".
 
 # Usage
 
@@ -16,12 +17,16 @@ Then, execute a script.
 
 ```
 /bin/bash run.sh {xmlpath} {charset}
+
+# ex.
+/bin/bash run.sh /mnt/c/Users/ktanoooo/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml Shift_JIS
 ```
 
 Please set `xmlpath` and `charset` in args.
 
 `xmlpath`
-Set `KindleSyncMetadataCache.xml` path created "Kindle for PC".
+
+Set the file path of the `KifndleSyncMetadataCache.xml` created by "Kindle for PC" or "Kindle for Mac".
 
 - WindowsOS WSL sample
   - /mnt/c/Users/{yourname}/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml
@@ -30,13 +35,10 @@ Set `KindleSyncMetadataCache.xml` path created "Kindle for PC".
 
 `charset`
 
-Set charset supported by the iconv-lite. Please choose from [here]("https://gist.github.com/ktanoooo/54cb81d199560a006b61a2508aa0f5fb")
+Set charset supported by the iconv-lite. Please choose from [here](https://gist.github.com/ktanoooo/54cb81d199560a006b61a2508aa0f5fb)
 
 Example: utf8, Shift_JIS
 
-```
-# ex.
-/bin/bash run.sh /mnt/c/Users/ktanoooo/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml Shift_JIS
-```
+# Output
 
 The csv file is created in `./output/kindle-**.csv`

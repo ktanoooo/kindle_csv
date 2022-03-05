@@ -9,12 +9,11 @@ module.exports = (outputpath, data, charset) => {
     path.resolve(__dirname, "encodings_list.json"),
     "utf8"
   );
-
-  list.includes(charset);
   if (list.includes(charset)) {
     fs.writeFile(outputpath, iconv.encode(data, charset), (err) => {
       if (err) throw err;
     });
+    console.log(`Finished!! A CSV file was output to ${outputpath}`);
   } else {
     console.log("This charset is not supported.");
   }

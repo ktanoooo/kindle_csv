@@ -5,12 +5,11 @@ const exportCsv = require("./export_csv");
 const dateFormatter = require("./date_formatter");
 const createCsvData = require("./create_csv_data");
 
-// Constants
 const dateTime = dateFormatter();
 const FILE_NAME = `kindle-${dateTime}.csv`;
 const OUTPUT_PATH = path.resolve(__dirname, `../output/${FILE_NAME}`);
-const XML_PATH = path.resolve(__dirname, "KindleSyncMetadataCache.xml");
-const CHARSET = !!process.argv[2] ? process.argv[2] : "utf8";
+const XML_PATH = process.argv[2];
+const CHARSET = process.argv[3];
 
 const main = () => {
   const text = fs.readFileSync(XML_PATH);

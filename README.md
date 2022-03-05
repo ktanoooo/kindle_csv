@@ -24,16 +24,32 @@ Then, execute a script.
 
 Please set `xmlpath` and `charset` in args.
 
-`xmlpath`
+## 1. `xmlpath`
 
 Set the file path of the `KifndleSyncMetadataCache.xml` created by "Kindle for PC" or "Kindle for Mac".
 
-- WindowsOS WSL sample
-  - /mnt/c/Users/{yourname}/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml
-- MacOS sample
-  - $HOME/Library/Containers/com.amazon.Kindle/Data/Library/Application Support/Kindle/Cache/KindleSyncMetadataCache.xml
+### WindowsOS
 
-`charset`
+Example.
+
+WSL
+
+- `/mnt/c/Users/{yourname}/AppData/Local/Amazon/Kindle/Cache/KindleSyncMetadataCache.xml`
+
+### MacOS
+
+Example.
+
+- `$HOME/Library/Application Support/Kindle/Cache/KindleSyncMetadataCache.xml`
+- `$HOME/Library/Containers/com.amazon.Kindle/Data/Library/Application Support/Kindle/Cache/KindleSyncMetadataCache.xml`
+
+As you can see, you can check like the following the images.
+
+|                              Select preferences                               |                           Check the Content Folder                            |
+| :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| ![mac1.png](https://github.com/ktanoooo/kindle_csv/blob/main/public/mac1.png) | ![mac2.png](https://github.com/ktanoooo/kindle_csv/blob/main/public/mac2.png) |
+
+## 2. `charset`
 
 Set charset supported by the iconv-lite. Please choose from [here](https://gist.github.com/ktanoooo/54cb81d199560a006b61a2508aa0f5fb)
 

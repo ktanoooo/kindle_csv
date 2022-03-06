@@ -2,7 +2,14 @@ const normalize = (str) => `"${str.replaceAll('"', "'")}"`;
 
 module.exports = (datas) => {
   let csvData = "";
-  const header = ["asin", "title", "author", "publisher", "purchase_date"];
+  const header = [
+    "asin",
+    "title",
+    "author",
+    "publisher",
+    "publication_date",
+    "purchase_date",
+  ];
   csvData += header.join() + "\n";
 
   datas.forEach((data) => {
@@ -13,11 +20,12 @@ module.exports = (datas) => {
         author: { "#text": authorText },
       },
       publishers: { publisher },
+      publication_date,
       purchase_date,
     } = data;
 
     csvData +=
-      [asin, titleText, authorText, publisher, purchase_date]
+      [asin, titleText, authorText, publisher, publication_date, purchase_date]
         .map((e) => normalize(e))
         .join(",") + "\n";
   });
